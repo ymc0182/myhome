@@ -1,11 +1,7 @@
-/*@font-face {*/
-/*    font-family: font1;*/
-/*    src: url("../font/font-1.ttf");*/
-/*}*/
 
 @font-face {
     font-family: 'myfont';
-    src: url("../font/font.bmp")format('woff');
+    src: url("../font/font.bmp");
 }
 
 body{
