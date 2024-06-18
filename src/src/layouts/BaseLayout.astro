@@ -1,0 +1,44 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh" class="scroll-pt-16 md:scroll-pt-20 lg:scroll-pt-24 scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&f=mp">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="view-transition" content="same-origin">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title && title+" | "} 袁某人 - 个人主页</title>
+		<meta name="keywords" content="袁某人,个人主页,jb18.cm,袁某人博客,yuanmren,yuanm.ren,个人导航,导航页">
+		<meta name="description" content="袁某人的个人主页">
+		<meta name="author" content="袁某人">
+		<meta name="copyright" content="袁某人">
+	</head>
+	<body ontouchstart="ontouchstart" class="scroll-smooth break-all bg-gradient-to-r from-[#ffefba] to-white backdrop-blur w-full lg:w-1/2 mx-auto tracking-wider">
+		<main class="px-6">
+			 <slot />
+		</main>
+
+		<footer class="pt-32 p-6">
+			<section class="text-xs text-black/30 text-neutral-content leading-loose">
+				<nav class="flex flex-wrap gap-2">
+					<a class="hover:text-black/50 hover:underline" href="/update-logs/">更新日志</a>
+					<a class="hover:text-black/50 hover:underline" href="/ly/">留言</a>
+					<a class="hover:text-black/50 hover:underline" href="/about/">关于</a>
+				</nav>
+				<p>Copyright © 2023 - All right reserved by 袁某人</p>
+				<p>Astro & Tailwindcss, at 10/06/2024</p>
+			</section>
+		</footer>
+
+		<script type="text/javascript">
+			function copyWechat() {
+				navigator.clipboard.writeText('ymc0182'); 
+				alert("已复制微信号[YMC0182]");
+			}
+		</script>
+	</body>
+</html>
+
