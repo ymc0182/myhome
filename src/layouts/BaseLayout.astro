@@ -1,7 +1,4 @@
 ---
-import FooterComponent from "../components/FooterComponent.astro";
-import HeaderComponent from "../components/HeaderComponent.astro";
-
 const { PageTitle } = Astro.props;
 ---
 
@@ -17,14 +14,7 @@ const { PageTitle } = Astro.props;
         <meta name="description" content="袁某人的个人主页">
     </head>
     <body ontouchstart="ontouchstart" class="min-h-screen text-[#555] font-sans">
-
-        <HeaderComponent />
-
-        <main class="container mx-auto p-6 space-y-6">
-            <slot />
-        </main>
-
-        <FooterComponent />
+        <slot />
     </body>
 </html>
 

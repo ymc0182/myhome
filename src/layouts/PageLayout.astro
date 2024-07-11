@@ -1,0 +1,17 @@
+---
+import FooterComponent from "../components/FooterComponent.astro";
+import HeaderComponent from "../components/HeaderComponent.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+const { PageTitle } = Astro.props;
+---
+
+<BaseLayout PageTitle = {PageTitle}>
+    <HeaderComponent />
+
+    <main class="container mx-auto p-6 space-y-6">
+        <slot />
+    </main>
+
+    <FooterComponent />
+</BaseLayout>
