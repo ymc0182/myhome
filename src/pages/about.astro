@@ -1,0 +1,56 @@
+---
+import BorderBoxComponent from "../components/BorderBoxComponent.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+
+---
+
+<PageLayout>
+    <BorderBoxComponent>
+        <article class="text-sm font-light leading-loose space-y-5">
+            <h1 class="font-bold text-lg text-black">😎 关于</h1>
+            <p>这是一个业余编程爱好者的主页，没事喜欢写写单页搭个博客，再坉几个喜欢的域名（正如你正在看的这个）。</p>
+            <p>从 18 年开始搭建博客，嫌弃 WP 太臃肿<span class="text-xs opacity-0 hover:opacity-100">（狗头保命）</span>主要用 Typecho，<span class="underline">袁某人</span> 这个称呼使用时间最长特意注册了 yuanm.ren，24 年的时候关闭，没有精力和时间去维护 屎山代码想优化也无从下手 索性关闭（刚开始到处碰壁逮住大佬就要友链，这是种非常不礼貌的行为新人不要这样）。 现在开始学习 前端框架，正在用 Astro 搭建新的博客。</p>
+            <p>收藏域名是从发现呆哥的博客开始的（有过一段时间友链），了解他的 非主流 论坛后才认识什么是精品域名，前期和许多人一样交了很多学费（但和大佬们比起来...），现在就只有不到 10 个吧（没统计，反正到期有邮件通知），一直留着做项目所以不方便展示。</p>
+            <hr>
+            <p>家住陕西西安方圆 2000KM 内，博客和米圈的老乡是真少的，算是稀有动物了。了解 Android、Java、JavaScript、HTML、PHP 等语言和 Vue、React、Angular、JQuery、Astro 等框架。</p>
+            <p>现实喜欢 摄影📷、摩托🛵、爬山⛰️，看了看钱包就先这么点爱好吧🥹，秉着 下雨不骑、天热不骑、天冷不骑、太晚不骑 的原则，于 24 年 1 月卖了陪我去过大西北的 GSX250，彻底消失在了摩友圈。</p>
+        </article>
+    </BorderBoxComponent>
+    <BorderBoxComponent>
+        <h1 class="font-bold text-lg text-black">🎨 技术栈</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div>
+                <h6 class="font-light text-base">HTML/CSS</h6>
+                <div class="h-0.5 w-2/3 mt-2 overflow-hidden bg-neutral-200">
+                    <div class="h-full w-10/12 bg-neutral-800"></div>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-light text-base">JavaScript</h6>
+                <div class="h-0.5 w-2/3 mt-2 overflow-hidden bg-neutral-200">
+                    <div class="h-full w-5/12 bg-neutral-800"></div>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-light text-base">PHP</h6>
+                <div class="h-0.5 w-2/3 mt-2 overflow-hidden bg-neutral-200">
+                    <div class="h-full w-11/12 bg-neutral-800"></div>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-light text-base">Java</h6>
+                <div class="h-0.5 w-2/3 mt-2 overflow-hidden bg-neutral-200">
+                    <div class="h-full w-1/12 bg-neutral-800"></div>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-light text-base">Astro</h6>
+                <div class="h-0.5 w-2/3 mt-2 overflow-hidden bg-neutral-200">
+                    <div class="h-full w-2/12 bg-neutral-800"></div>
+                </div>
+            </div>
+        </div>
+    </BorderBoxComponent>
+</PageLayout>
