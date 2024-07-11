@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BorderBox from "../components/BorderBoxComponent.astro";
+---
+<BaseLayout PageTitle = '✍️ 留言'>
+    <BorderBox>
+        <h1 class="font-bold text-lg text-black">✍️ 留言</h1>
+        <div class="font-light text-sm leading-loose">
+            <p>本页使用 Giscus 实现评论，你需要在当前浏览器登陆 Github 才能评论，如果下方框框内容长时间没有加载出来，请用魔法或换 IP 尝试；如果你还是无法评论，说明我们缘分未到。</p>
+            <p>你可以在这畅所欲言，但请不要发表违反中国大陆法律或垃圾内容，否则我会拉黑你的 Github 账户。</p>
+        </div>
+    </BorderBox>
+    <BorderBox>
+        <div class="giscus"></div>
+    </BorderBox>
+</BaseLayout>
+
+<script is:inline src="https://giscus.app/client.js"
+        data-repo="ymc0182/myhome"
+        data-repo-id="R_kgDOMKzdyQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMKzdyc4CgKn6"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
