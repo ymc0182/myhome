@@ -14,7 +14,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 	</head>
 	<body class="relative dark:bg-neutral-950">
         <section class="relative flex flex-col h-auto overflow-hidden border-b bg-background md:shadow-xl">
-            <div class="container mx-auto px-8 py-16 z-10 lg:py-24">
+            <div class="container mx-auto px-8 my-16 z-10 lg:my-24">
                 <div class="flex justify-between items-center">
 					<div>
 						<h1 class="inline-block text-3xl font-bold tracking-tighter lg:text-5xl xl:text-6xl/none">Hi, I'm Yuan 👋</h1>
@@ -29,7 +29,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 			<RetroGrid />
         </section>
 
-        <section class="container mx-auto px-8 py-16 lg:py-24">
+        <section class="container mx-auto px-8 my-16 lg:my-24">
 			<div class="font-light leading-relaxed tracking-wide text-justify">
 				<h2 class="text-xl font-bold mb-4">关于</h2>
 				<div class="text-muted-foreground">
@@ -40,8 +40,22 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 			<RainbowButton className="text-sm font-bold" >Browse my blog</RainbowButton>
         </section>
 
+		<section class="container mx-auto px-8 my-16 lg:my-24">
+			<h2 class="text-xl font-bold mb-4">找到我</h2>
+			<div class="font-light leading-relaxed tracking-wide text-justify">
+				如果你只是想聊聊，给我发邮件 [<a class="border-b border-dashed" href="mailto:wo@jb18.cm">wo@jb18.cm</a>] 非常合适，我看到会第一时间回复。
+			</div>
+		</section>
 
-		<!-- <RetroGrid /> -->
+		<footer class="border-t">
+			<div class="container mx-auto p-8">
+				<div class="flex flex-wrap gap-4 justify-between items-center text-xs text-muted-foreground font-light">
+					<p>Powered By Astro · Designed By Mr.Yuan&Magic UI ♥.</p>
+					<p>更新于 2024/10/18</p>
+				</div>
+			</div>
+		</footer>
+
 	</body>
 </html>
 
