@@ -1,0 +1,56 @@
+---
+import RetroGrid from "@/components/ui/retro-grid";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+---
+<html lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&amp;f=mp" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>袁某人主页🫨</title>
+        <meta name="keywords" content="袁某人,个人主页,jb18.cm,袁某人博客,个人导航,导航页,个人网站" />
+        <meta name="description" content="袁某人的主页，袁某的个人网站" />
+	</head>
+	<body class="relative dark:bg-neutral-950">
+        <section class="relative flex flex-col h-auto overflow-hidden border-b bg-background md:shadow-xl">
+            <div class="container mx-auto px-8 my-32  z-10">
+                <div class="flex justify-between items-center">
+					<div>
+						<h1 class="inline-block text-3xl font-bold tracking-tighter lg:text-5xl xl:text-6xl/none">Hi, I'm Yuan 👋</h1>
+						<p class="font-light mt-4">欢迎来访袁某的个人主页, 在这你可以看到的我的全部链接及介绍</p>
+					</div>
+					<span class="shrink-0 overflow-hidden rounded-full size-28 border">
+						<img class="aspect-square w-full h-full" src="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&amp;f=mp">
+					</span>
+				</div>
+            </div>
+
+			<RetroGrid />
+        </section>
+
+        <section class="container mx-auto px-8 py-24">
+			<div class="font-light leading-relaxed tracking-wide text-justify">
+				<h2 class="text-xl font-bold mb-4">关于</h2>
+				<p class="mb-6">17年开始接触编码。我的编程之旅始于PHP，这让我对编程世界充满了热爱。作为一名业余爱好者，我始终对新技术充满好奇，并乐于不断探索和学习。最近，我决定扩展我的技能树，开始学习前端开发。正在努力实践令我满意的作品...</p>
+				<p class="mb-8">欢迎光临我的个人博客！在这个小小的数字空间里，我分享我的故事、兴趣和创意。无论你是偶然路过，还是特意来访，都希望你能在这里找到一些有趣和有价值的东西。让我们一起探索这个充满可能性的世界，期待与你在网络的海洋中相遇！</p>
+			</div>
+			<RainbowButton className="text-sm font-bold" >Browse my blog</RainbowButton>
+        </section>
+
+
+		<!-- <RetroGrid /> -->
+	</body>
+</html>
+
+<script>
+	function updateTheme() {
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	}
+	updateTheme();
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+</script>
