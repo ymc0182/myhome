@@ -1,61 +1,65 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 
-import RetroGrid from "@/components/ui/retro-grid";
-import { RainbowButton } from "@/components/ui/rainbow-button";
-
-const angle = 30;
+const tags = [
+    '🤐 废话输出机器',
+    '🤡 人丑没钱',
+    '😪 重度拖延症',
+    '🎧 准时emo',
+    '😏 熬夜冠军',
+    '🤨 人之常情 ',
+    '🥣 需要食物'
+]
 ---
 
 <BaseLayout>
-
     <main>
-        <section class="relative flex flex-col h-auto overflow-hidden border-b bg-background md:shadow-xl">
-            <div class="container mx-auto px-8 my-16 z-10 lg:my-24">
-                <div class="flex gap-6 justify-between items-center">
-                    <div>
-                        <h1 class="inline-block text-3xl font-bold tracking-tighter lg:text-5xl xl:text-6xl/none">Hi, I'm Yuan 👋</h1>
-                        <p class="font-light mt-4 text-muted-foreground">欢迎来访袁某的个人主页, 在这你可以看到的我的全部链接及介绍</p>
-                    </div>
-                    <span class="shrink-0 overflow-hidden rounded-full size-28 border">
-                        <img loading="lazy" class="aspect-square w-full h-full" src="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&amp;f=mp">
-                    </span>
+        <section class="container mx-auto px-8 pt-32 pb-16">
+            <div class="flex gap-5 justify-between items-center">
+                <div class="text-neutral-800">
+                    <h1 class="text-3xl font-bold lg:text-5xl xl:text-6xl/none">Hi, I'm Yuan 👋</h1>
+                    <p class="font-light mt-4">欢迎来访袁某的个人主页, 在这你可以看到的我的全部链接及介绍</p>
                 </div>
+                <img class="shrink-0 rounded-full size-28 border" loading="lazy" src="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&f=mp">
             </div>
-
-            <RetroGrid className="dark:bg-neutral-800" angle = {angle} />
-        </section>
-
-        <section class="container mx-auto px-8 my-16 lg:my-24">
-            <div class="font-light leading-relaxed tracking-wide text-justify">
-                <h2 class="text-xl font-bold mb-4">关于</h2>
-                <p class="mb-6">17年开始接触编码。我的编程之旅始于PHP，这让我对编程世界充满了热爱。作为一名业余爱好者，我始终对新技术充满好奇，并乐于不断探索和学习。最近，我决定扩展我的技能树，开始学习前端开发。正在努力实践令我满意的作品...</p>
-                <p class="mb-8">欢迎光临我的个人博客！在这个小小的数字空间里，我分享我的故事、兴趣和创意。无论你是偶然路过，还是特意来访，都希望你能在这里找到一些有趣和有价值的东西。让我们一起探索这个充满可能性的世界，期待与你在网络的海洋中相遇！</p>
-            </div>
-            <RainbowButton className="text-sm font-bold" id='goBlog'>Browse my blog</RainbowButton>
-        </section>
-
-        <section class="container mx-auto px-8 my-16 lg:my-24">
-            <h2 class="text-xl font-bold mb-4" >找到我</h2>
-            <div class="font-light leading-relaxed tracking-wide text-justify">
-                如果你只是想聊聊，给我发邮件 [<a class="border-b border-dashed" href="mailto:wo@jb18.cm">wo@jb18.cm</a>] 非常合适，我看到会第一时间回复。
+            <div class="pt-16">
+                <a href="https://jb18.cm" target="_blank" class="px-5 py-2.5 bg-red-600 text-xl font-bold text-white uppercase">Browse my blog</a>
+                <div class="mt-6 text-5xl font-bold font-serif text-neutral-100">JUST DO IT!</div>
             </div>
         </section>
+
+        <div class="border-t border-t-neutral-200"></div>
+
+        <section class="container mx-auto px-8 py-16">
+            <article class="font-light text-justify space-y-6">
+                <h2 class="flex items-center gap-2 font-bold font-mono text-xl">About
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                    </svg>                      
+                </h2>
+                <p>14 年开始接触编码。我的编程之旅始于 PHP，这让我对编程世界充满了热爱，17 开始捣鼓 Typecho 博客。作为一名业余爱好者，我始终对新技术充满好奇，并乐于不断探索和学习。最近，我决定扩展我的技能树，开始学习前端开发。正在努力实践令我满意的作品...</p>
+                <p>我的博客之旅暂时结束于 24 年初，但在年底我会上线我的 Astro 静态博客。</p>
+                <p>正如本站标题一样，你可以叫我 袁某 或 小袁，一名摄影爱好者也是一位摩友，没事喜欢收藏点小米。</p>
+                <ul class="flex flex-wrap items-center gap-2.5 text-xs lg:text-sm  *:drop-shadow">
+                    {tags.map(tag => (
+                        <li class="rounded-full bg-neutral-200 px-1.5 py-0.5">{tag}</li>
+                    ))}
+                </ul>
+            </article>
+        </section>
+
+        <div class="border-t border-t-neutral-200"></div>
+
     </main>
 
-    <footer class="border-t">
-        <div class="container mx-auto p-8">
-            <div class="flex flex-wrap gap-4 justify-between items-center text-xs text-muted-foreground font-light">
-                <p>Powered By Astro · Designed By Mr.Yuan&Magic UI ♥.</p>
-                <p>更新于 2024/10/18</p>
-            </div>
+    <footer class="container mx-auto px-8 pt-16 space-y-1">
+        <div>
+            <a href="mailto:wo@jb18.cm" class="inline bg-emerald-700 text-white font-bold text-lg font-mono  px-5 py-1.5">Email:wo@jb18.cm</a>
+        </div>
+        <div class="inline-flex items-center font-mono bg-black text-white p-1 *:px-2">
+            <span class="bg-white text-black">&copy; Mr.Yuan</span>
+            <span class="">Astro</span>
         </div>
     </footer>
-
 </BaseLayout>
 
-<script is:inline>
-    document.getElementById('goBlog').onclick = function(){
-        window.open('https://jb18.cm');
-    }
-</script>
