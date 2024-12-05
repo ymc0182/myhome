@@ -1,0 +1,54 @@
+---
+import BlurGradientBg from '@/components/BlurGradientBg.astro'
+import GridPattern from '@/components/ui/grid-pattern'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { cn } from '@/lib/utils'
+---
+
+<BaseLayout>
+    <main class="relative h-screen overflow-hidden flex flex-col justify-center">
+        <BlurGradientBg />
+        <GridPattern
+            width={30}
+            height={30}
+            x={-1}
+            y={-1}
+            strokeDasharray={"4 2"}
+            className={cn(
+                "stroke-white/30 p-8 -z-40",
+            )}
+
+            client:load
+        />
+
+        <article>
+            <section class="container mx-auto px-8">
+                <div class="flex justify-between items-center">
+                    <div class="text-white">
+                        <h1 class="text-3xl font-bold lg:text-5xl xl:text-6xl/none">Hi, I'm Yuan 👋</h1>
+                        <p class="font-light mt-4">欢迎来访袁某的个人主页, 在这你可以看到的我的全部链接及介绍</p>
+                    </div>
+                    <img class="shrink-0 rounded-full size-28 border" loading="lazy" src="https://cravatar.com/avatar/5FBB13B635295D1226A17B782951C309?s=400&f=mp">
+                </div>
+            </section>
+
+            <section class="container mx-auto px-8 py-32">
+                <a href="https://jb18.cm" target="_blank" class="inline-block transition active:scale-95 "><span class="px-5 py-2.5 bg-red-600 text-xl font-bold text-white uppercase hover:bg-white hover:text-red-600">Browse my blog</span></a>
+                <div class="mt-6 text-5xl font-bold font-serif">JUST DO IT!</div>
+            </section>
+        </article>
+
+    </main>
+    <footer class="container mx-auto px-8 space-y-6">
+        <div>
+            <a href="mailto:wo@jb18.cm" class="inline bg-emerald-700 text-white font-bold text-xl font-serif rounded-full px-5 py-1.5">Email:wo@jb18.cm</a>
+        </div>
+        <div class="inline-flex items-center bg-black text-white *:px-2">
+            <span class="text-lg font-bold bg-white text-black">&copy; Mr.Yuan</span>
+            <span class="text-lg font-bold">Astro</span>
+            <span class="text-lg font-bold bg-white text-black">Magic UI</span>
+            <span class="text-lg font-bold">Color4bg</span>
+        </div>
+    </footer>
+</BaseLayout>
+
