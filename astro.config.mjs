@@ -1,11 +1,19 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from "@astrojs/cloudflare";
-
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  adapter: cloudflare(),
-  integrations: [tailwind()]
+
+  devToolbar: {
+		enabled: false
+		},
+
+	server: {
+		host: true,
+		port: 4321,
+	},
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
